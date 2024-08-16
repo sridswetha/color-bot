@@ -8,7 +8,7 @@ export default function Home() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: "hi! I'm the color bot. simply type in any color, and i will provide info about where that color can be found!",
+      content: "hi! I'm the color bot. simply type in any color or word, and i'll provide colorful information about it 😄",
     },
   ])
   const [message, setMessage] = useState('')
@@ -101,7 +101,7 @@ export default function Home() {
         direction={'column'}
         width="500px"
         height="700px"
-        border="1px solid black"
+        border="none"
         p={2}
         spacing={3}
       >
@@ -114,7 +114,7 @@ export default function Home() {
           mb={2}
         >
           <Typography variant="h4" align="center" gutterBottom>
-            the color bot 🌈
+            the color bot
           </Typography>
         </Box>
         <Stack
@@ -155,7 +155,7 @@ export default function Home() {
           spacing={2}
         >
           <TextField
-            label="Message"
+            label="message"
             fullWidth
             value={message}
             onChange={(e) => setMessage(e.target.value)}

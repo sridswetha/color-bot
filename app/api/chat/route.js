@@ -4,7 +4,7 @@ import Groq from 'groq-sdk'
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY })
 
 // system prompt: so we change it here to automate results based on the input
-const systemPrompt = 'Welcome to the color bot! 👋 Hello! Simply type in any color, and Ill provide info about where that color can be found!'
+const systemPrompt = "Simply type in any color, and Ill provide info about where that color can be found! Have to throw an error if anything not a color is typed in"
 
 export async function POST(req) {
     const data = await req.json() // Parse the JSON body of the incoming request

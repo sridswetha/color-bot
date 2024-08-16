@@ -131,14 +131,15 @@ export default function Home() {
               justifyContent={
                 message.role === 'assistant' ? 'flex-start' : 'flex-end'
               }
+              sx={{ border: 'none' }} // Remove border
             >
               <Box
                 bgcolor={
                   message.role === 'assistant'
                     ? 'primary.main'
-                    : 'secondary.main'
+                    : 'white' // Change background color of user message to white
                 }
-                color="white"
+                color={message.role === 'assistant' ? 'white' : 'black'} // Set text color
                 borderRadius={16}
                 p={3}
               >
